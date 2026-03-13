@@ -216,5 +216,15 @@ Yêu người vừa ý, cưới người mình thương...</p>
 <div id="musicContainer"></div>
 <script src="assets/js/home.js" defer></script>
 <script src="assets/js/datahome.js" defer></script>
+<script>
+function isMobile(){
+return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+}
+
+if(!isMobile()){
+window.location.href="mobile.html";
+}
+
+</script>
 </body>
 </html>
