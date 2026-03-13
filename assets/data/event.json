@@ -1,0 +1,43 @@
+{
+  "tabs":[
+    {
+      "name":"Ăn Hỏi & Xin Cưới",
+      "date":"2026-03-14",
+      "events":[
+  {"time":"06:30","title":"Gia đình nhà trai chuẩn bị lễ và tập trung"},
+  {"time":"07:00","title":"Nhà trai xuất phát đến nhà gái"},
+  {"time":"08:15","title":"Nhà trai đến nơi, ổn định và chuẩn bị làm lễ"},
+  {"time":"08:30","title":"Tiến hành lễ ăn hỏi và trao tráp trầu cau"},
+  {"time":"09:00","title":"Đại diện hai họ phát biểu, nhà gái nhận lễ"},
+  {"time":"09:30","title":"Cô dâu ra mắt họ hàng hai bên"},
+  {"time":"09:45","title":"Hai họ chụp ảnh lưu niệm (nếu có)"},
+  {"time":"10:30","title":"Hai họ dùng bữa cơm thân mật tại nhà gái"},
+  {"time":"12:00","title":"Gia đình nhà trai xin phép ra về"}
+]
+    },
+    {
+      "name":"Dẫn Trầu",
+      "date":"2026-04-10",
+      "events":[
+  {"time":"06:30","title":"Gia đình nhà trai chuẩn bị lễ và tập trung"},
+  {"time":"07:00","title":"Đoàn nhà trai xuất phát đến nhà gái"},
+  {"time":"08:15","title":"Đoàn nhà trai đến nơi, ổn định đội hình"},
+  {"time":"08:30","title":"Tiến hành lễ dẫn trầu"},
+  {"time":"09:00","title":"Đại diện hai họ phát biểu và nhà gái nhận lễ"},
+  {"time":"09:20","title":"Hai họ trò chuyện và chụp ảnh lưu niệm (nếu có)"},
+  {"time":"09:45","title":"Gia đình nhà trai xin phép ra về"}
+]
+    },
+    {
+      "name":"Lễ Cưới",
+      "date":"2026-04-11",
+      "events":[
+        {"time":"01:00 - 01:15","title":"Nhà Trai Xuất Phát"},
+        {"time":"02:00","title":"Đến Nhà Gái"},
+        {"time":"2:00 - 03:00","title":"Làm Lễ Xin Dâu"},
+        {"time":"03:00 - 03:15","title":"Đón Dâu Lên Xe"},
+        {"time":"03:15 - 4:30","title":"Di Chuyển Về Bên Nhà Trai"}
+      ]
+    }
+  ]
+}
