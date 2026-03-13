@@ -1095,7 +1095,7 @@ tab.events.forEach(ev=>{
 
 div.innerHTML+=`
 <div class="timeline-item">
-<span class="time">${ev.time}</span>
+<span class="time">Sự Kiện</span>
 <span class="event">${ev.title}</span>
 </div>
 `;
@@ -1128,56 +1128,35 @@ setInterval(checkTimeline,60000);
 
 function checkTimeline(){
 
-const tabs=document.querySelectorAll(".tab-content");
+const tabs = document.querySelectorAll(".tab-content");
 
 tabs.forEach(tab=>{
 
-const items=tab.querySelectorAll(".timeline-item");
-const date=tab.dataset.date;
+const date = new Date(tab.dataset.date);
+const today = new Date();
 
-const now=new Date();
+/* bỏ giờ phút */
+today.setHours(0,0,0,0);
 
-let doneCount=0;
+if(today > date){
 
-items.forEach(item=>{
-
-const time=item.querySelector(".time").textContent;
-
-const [h,m]=time.split(":");
-
-const eventTime=new Date(date);
-
-eventTime.setHours(h);
-eventTime.setMinutes(m);
-
-if(now>=eventTime){
-
-const event=item.querySelector(".event");
-
-if(!event.innerHTML.includes("✓")){
-event.innerHTML+=" ✓";
-}
-
-doneCount++;
-
-}
-
-});
-
-/* nếu hết timeline */
-if(doneCount===items.length){
 if(!tab.querySelector(".timeline-finish")){
-const finish=document.createElement("div");
-finish.className="timeline-item timeline-finish";
-const d = new Date(date);
-const day = String(d.getDate()).padStart(2,"0");
-const month = String(d.getMonth()+1).padStart(2,"0");
-finish.textContent=`${day}/${month} Sự Kiện Diễn Ra Thành Công Tốt Đẹp`;
+
+const finish = document.createElement("div");
+finish.className = "timeline-finish";
+
+finish.textContent = "Sự Kiện Đã Thành Công Tốt Đẹp";
+
 tab.appendChild(finish);
+
 }
+
 }
 
 });
+
 }
+
+checkTimeline();
 
 console.log("JS ĐÃ CHẠY");
