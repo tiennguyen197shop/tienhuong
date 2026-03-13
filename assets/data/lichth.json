@@ -24,7 +24,7 @@
   },
   "wedding_info": {
     "groom_side": {
-      "title": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI TƯ GIA",
+      "title": "LỄ THÀNH HÔN",
       "time_label": "Vào Lúc",
       "time": {
         "hour": "00 giờ 00",
@@ -36,14 +36,14 @@
       "lunar_date": "(Tức Ngày 24 Tháng 02 Năm Bính Ngọ)",
       "place": {
         "title": "BỮA CƠM THÂN MẬT TẠI",
-        "name": "Nhà Số 7, Xóm Trung Dưới",
-        "address": "Nguyên Hanh, Xã Phú Xuyên, TP.Hà Nội.",
+        "name": "TƯ GIA NHÀ TRAI",
+        "address": "Nhà Số 7, Xóm Trung Dưới, Nguyên Hanh, Xã Phú Xuyên, TP.Hà Nội.",
         "map_button": "Đường Tới Địa Điểm Tổ Chức",
         "map_link": "https://maps.app.goo.gl/iasiFRNNwn1wJKiy7?g_st=ac"
       }
     },
     "bride_side": {
-      "title": "LỄ VU QUY ĐƯỢC CỬ HÀNH TẠI TƯ GIA",
+      "title": "LỄ VU QUY",
       "time_label": "Vào Lúc",
       "time": {
         "hour": "00 giờ 00",
@@ -55,8 +55,8 @@
       "lunar_date": "(Tức Ngày 24 Tháng 02 Năm Bính Ngọ)",
       "place": {
         "title": "BỮA CƠM THÂN MẬT TẠI",
-        "name": "Xã Khoái Châu, Thôn Thông Quan Hạ, Ngõ 139,  Nghách 21, Nhà Số 7",
-        "address": "TP. Hưng Yên",
+        "name": "TƯ GIA NHÀ GÁI",
+        "address": "Xã Khoái Châu, Thôn Thông Quan Hạ, Ngõ 139,  Nghách 21, Nhà Số 7, TP. Hưng Yên",
         "map_button": "Đường Tới Địa Điểm Tổ Chức",
         "map_link": "https://goo.gl/maps/P58LrPdxjapQHAVt8?g_st=ac"
       }
