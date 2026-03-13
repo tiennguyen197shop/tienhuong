@@ -2,7 +2,9 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Thiệp Cưới</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thiệp Cưới Nguyễn Tiến & Lê Hường</title>
 
 <style>
 
@@ -12,17 +14,109 @@ height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#8c1c1c;
-color:#e8c88f;
-font-family:serif;
+background:linear-gradient(135deg,#8c1c1c,#5a0f0f);
+font-family:'Playfair Display',serif;
+color:#f1d6a3;
 text-align:center;
 }
+
+/* card */
+
+.card{
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(10px);
+padding:50px 40px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+max-width:420px;
+width:90%;
+}
+
+/* icon */
+
+.icon{
+font-size:60px;
+margin-bottom:15px;
+}
+
+/* title */
+
+h1{
+font-size:26px;
+margin:0;
+letter-spacing:1px;
+}
+
+/* text */
+
+p{
+opacity:0.9;
+margin-top:10px;
+font-size:15px;
+}
+
+/* divider */
+
+.line{
+width:80px;
+height:2px;
+background:#e8c88f;
+margin:20px auto;
+opacity:0.6;
+}
+
+/* qr */
+
+.qr{
+margin-top:25px;
+}
+
+.qr img{
+width:140px;
+border-radius:8px;
+background:white;
+padding:6px;
+}
+
+/* footer */
+
+.footer{
+margin-top:25px;
+font-size:13px;
+opacity:0.7;
+}
+
 </style>
 </head>
+
 <body>
-<div>
-<h2>📱 Vui lòng mở thiệp bằng điện thoại</h2>
-<p>Thiệp cưới được thiết kế dành riêng cho mobile</p>
+
+<div class="card">
+
+<div class="icon">📱</div>
+
+<h1>Vui Lòng Mở Thiệp Bằng Điện Thoại</h1>
+
+<div class="line"></div>
+
+<p>
+Thiệp cưới được thiết kế dành riêng cho điện thoại  
+để có trải nghiệm tốt nhất.
+</p>
+
+<div class="qr">
+
+<img src="assets/images/qr.png">
+
+<p>Quét mã QR để mở thiệp</p>
+
 </div>
+
+<div class="footer">
+Nguyễn Tiến ❤️ Lê Hường
+</div>
+
+</div>
+
 </body>
 </html>
