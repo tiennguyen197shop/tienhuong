@@ -1159,35 +1159,4 @@ tab.appendChild(finish);
 
 checkTimeline();
 
-// CHỈ CHO PHÉP MOBILE
-function checkDevice() {
-
-const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
-
-if(!isMobile){
-document.body.innerHTML = `
-<div style="
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-background:#8c1c1c;
-color:#e8c88f;
-font-family:serif;
-text-align:center;
-padding:20px;
-">
-
-<h2>📱 Vui lòng mở thiệp trên điện thoại</h2>
-<p>Thiệp cưới này được thiết kế dành riêng cho điện thoại.</p>
-
-</div>
-`;
-}
-
-}
-
-checkDevice();
-
 console.log("JS ĐÃ CHẠY");
