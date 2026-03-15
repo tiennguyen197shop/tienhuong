@@ -1127,36 +1127,22 @@ setInterval(checkTimeline,60000);
 
 
 function checkTimeline(){
-
 const tabs = document.querySelectorAll(".tab-content");
-
 tabs.forEach(tab=>{
-
 const date = new Date(tab.dataset.date);
 const today = new Date();
-
 /* bỏ giờ phút */
 today.setHours(0,0,0,0);
-
 if(today > date){
-
 if(!tab.querySelector(".timeline-finish")){
-
 const finish = document.createElement("div");
 finish.className = "timeline-finish";
-
 finish.textContent = "Sự Kiện Đã Thành Công Tốt Đẹp";
-
 tab.appendChild(finish);
-
 }
-
 }
-
 });
-
 }
-
 checkTimeline();
 
 console.log("JS ĐÃ CHẠY");
