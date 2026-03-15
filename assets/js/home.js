@@ -51,17 +51,32 @@ window.addEventListener("load",()=>{
 ================================ */
 
 const folder = "assets/images/anhcuoi/";
+const TOTAL_IMAGES = 8;
+
 let images = [];
+
+/* containers */
 
 const gallery = document.getElementById("gallery");
 const inviteBox = document.getElementById("invite-images");
 
-/* tổng số ảnh */
-const TOTAL_IMAGES = 40;
+/* kiểm tra ảnh tồn tại */
 
-/* load ảnh */
+function checkImage(url) {
+  return new Promise(resolve => {
 
-function loadImages(){
+    const img = new Image();
+    img.src = url;
+
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
+
+  });
+}
+
+/* load toàn bộ ảnh a1 a2 a3 ... */
+
+async function loadImages(){
 
   for(let i=1;i<=TOTAL_IMAGES;i++){
 
@@ -76,48 +91,54 @@ function loadImages(){
 
 }
 
-/* random */
+/* random ảnh */
 
-function shuffleArray(array){
+function shuffleArray(array) {
 
-  for(let i=array.length-1;i>0;i--){
+  for (let i = array.length - 1; i > 0; i--) {
 
-    const j=Math.floor(Math.random()*(i+1));
+    const j = Math.floor(Math.random() * (i + 1));
 
-    [array[i],array[j]]=[array[j],array[i]];
+    [array[i], array[j]] = [array[j], array[i]];
 
   }
 
 }
 
-/* gallery */
+/* ===============================
+   GALLERY 4 ẢNH
+================================ */
 
-function renderGallery(){
+function renderGallery() {
 
-  if(!gallery) return;
+  if (!gallery) return;
 
-  gallery.innerHTML="";
+  gallery.innerHTML = "";
+
+  if (images.length === 0) {
+
+    gallery.innerHTML = "<p style='opacity:.6'>Chưa có ảnh</p>";
+    return;
+
+  }
 
   images.slice(0,4).forEach((src,index)=>{
 
-    const div=document.createElement("div");
-    div.className="gallery-item";
+    const div = document.createElement("div");
+    div.className = "gallery-item";
 
-    const img=document.createElement("img");
-
-    img.src=src;
-    img.loading="lazy";
-    img.decoding="async";
+    const img = document.createElement("img");
+    img.src = src;
+    img.loading = "lazy";
 
     div.appendChild(img);
+    div.addEventListener("click", () => openLightbox(index));
+    
+    if (index === 3 && images.length > 4) {
 
-    div.onclick=()=>openLightbox(index);
-
-    if(index===3 && images.length>4){
-
-      const overlay=document.createElement("div");
-      overlay.className="more-overlay";
-      overlay.innerText="+"+(images.length-4);
+      const overlay = document.createElement("div");
+      overlay.className = "more-overlay";
+      overlay.innerText = "+" + (images.length - 4);
 
       div.appendChild(overlay);
 
@@ -129,26 +150,28 @@ function renderGallery(){
 
 }
 
-/* ảnh lời mời */
+/* ===============================
+   3 ẢNH TRÂN TRỌNG KÍNH MỜI
+================================ */
 
 function renderInviteImages(){
 
-  if(!inviteBox) return;
+  if (!inviteBox) return;
 
-  inviteBox.innerHTML="";
+  inviteBox.innerHTML = "";
 
-  const inviteImages=[...images].sort(()=>0.5-Math.random()).slice(0,3);
+  if(images.length < 3) return;
+
+  const inviteImages = [...images].sort(() => 0.5 - Math.random()).slice(0,3);
 
   inviteImages.forEach(src=>{
 
-    const div=document.createElement("div");
-    div.className="invite-img";
+    const div = document.createElement("div");
+    div.className = "invite-img";
 
-    const img=document.createElement("img");
-
-    img.src=src;
-    img.loading="lazy";
-    img.decoding="async";
+    const img = document.createElement("img");
+    img.src = src;
+    img.loading = "lazy";
 
     div.appendChild(img);
     inviteBox.appendChild(div);
@@ -156,6 +179,8 @@ function renderInviteImages(){
   });
 
 }
+
+/* =============================== */
 
 loadImages();
 
@@ -1087,22 +1112,36 @@ setInterval(checkTimeline,60000);
 
 
 function checkTimeline(){
+
 const tabs = document.querySelectorAll(".tab-content");
+
 tabs.forEach(tab=>{
+
 const date = new Date(tab.dataset.date);
 const today = new Date();
+
 /* bỏ giờ phút */
 today.setHours(0,0,0,0);
+
 if(today > date){
+
 if(!tab.querySelector(".timeline-finish")){
+
 const finish = document.createElement("div");
 finish.className = "timeline-finish";
+
 finish.textContent = "Sự Kiện Đã Thành Công Tốt Đẹp";
+
 tab.appendChild(finish);
+
 }
+
 }
+
 });
+
 }
+
 checkTimeline();
 
 console.log("JS ĐÃ CHẠY");
