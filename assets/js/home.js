@@ -53,50 +53,19 @@ window.addEventListener("load",()=>{
 const folder = "assets/images/anhcuoi/";
 let images = [];
 
-/* containers */
-
 const gallery = document.getElementById("gallery");
 const inviteBox = document.getElementById("invite-images");
 
-/* kiểm tra ảnh tồn tại */
+/* tổng số ảnh */
+const TOTAL_IMAGES = 40;
 
-function checkImage(url) {
-  return new Promise(resolve => {
+/* load ảnh */
 
-    const img = new Image();
-    img.src = url;
+function loadImages(){
 
-    img.onload = () => resolve(true);
-    img.onerror = () => resolve(false);
+  for(let i=1;i<=TOTAL_IMAGES;i++){
 
-  });
-}
-
-/* load toàn bộ ảnh a1 a2 a3 ... */
-
-async function loadImages() {
-
-  let index = 1;
-
-  while (true) {
-
-    let found = false;
-
-    for (let ext of ["jpg","png","jpeg","webp"]) {
-
-      const url = `${folder}a${index}.${ext}`;
-
-      if (await checkImage(url)) {
-        images.push(url);
-        found = true;
-        break;
-      }
-
-    }
-
-    if (!found) break;
-
-    index++;
+    images.push(`${folder}a${i}.jpg`);
 
   }
 
@@ -107,54 +76,48 @@ async function loadImages() {
 
 }
 
-/* random ảnh */
+/* random */
 
-function shuffleArray(array) {
+function shuffleArray(array){
 
-  for (let i = array.length - 1; i > 0; i--) {
+  for(let i=array.length-1;i>0;i--){
 
-    const j = Math.floor(Math.random() * (i + 1));
+    const j=Math.floor(Math.random()*(i+1));
 
-    [array[i], array[j]] = [array[j], array[i]];
+    [array[i],array[j]]=[array[j],array[i]];
 
   }
 
 }
 
-/* ===============================
-   GALLERY 4 ẢNH
-================================ */
+/* gallery */
 
-function renderGallery() {
+function renderGallery(){
 
-  if (!gallery) return;
+  if(!gallery) return;
 
-  gallery.innerHTML = "";
-
-  if (images.length === 0) {
-
-    gallery.innerHTML = "<p style='opacity:.6'>Chưa có ảnh</p>";
-    return;
-
-  }
+  gallery.innerHTML="";
 
   images.slice(0,4).forEach((src,index)=>{
 
-    const div = document.createElement("div");
-    div.className = "gallery-item";
+    const div=document.createElement("div");
+    div.className="gallery-item";
 
-    const img = document.createElement("img");
-    img.src = src;
-    img.loading = "lazy";
+    const img=document.createElement("img");
+
+    img.src=src;
+    img.loading="lazy";
+    img.decoding="async";
 
     div.appendChild(img);
-    div.addEventListener("click", () => openLightbox(index));
-    
-    if (index === 3 && images.length > 4) {
 
-      const overlay = document.createElement("div");
-      overlay.className = "more-overlay";
-      overlay.innerText = "+" + (images.length - 4);
+    div.onclick=()=>openLightbox(index);
+
+    if(index===3 && images.length>4){
+
+      const overlay=document.createElement("div");
+      overlay.className="more-overlay";
+      overlay.innerText="+"+(images.length-4);
 
       div.appendChild(overlay);
 
@@ -166,28 +129,26 @@ function renderGallery() {
 
 }
 
-/* ===============================
-   3 ẢNH TRÂN TRỌNG KÍNH MỜI
-================================ */
+/* ảnh lời mời */
 
 function renderInviteImages(){
 
-  if (!inviteBox) return;
+  if(!inviteBox) return;
 
-  inviteBox.innerHTML = "";
+  inviteBox.innerHTML="";
 
-  if(images.length < 3) return;
-
-  const inviteImages = [...images].sort(() => 0.5 - Math.random()).slice(0,3);
+  const inviteImages=[...images].sort(()=>0.5-Math.random()).slice(0,3);
 
   inviteImages.forEach(src=>{
 
-    const div = document.createElement("div");
-    div.className = "invite-img";
+    const div=document.createElement("div");
+    div.className="invite-img";
 
-    const img = document.createElement("img");
-    img.src = src;
-    img.loading = "lazy";
+    const img=document.createElement("img");
+
+    img.src=src;
+    img.loading="lazy";
+    img.decoding="async";
 
     div.appendChild(img);
     inviteBox.appendChild(div);
@@ -196,9 +157,8 @@ function renderInviteImages(){
 
 }
 
-/* =============================== */
-
 loadImages();
+
 
 /* =====================================================
    LIGHTBOX
