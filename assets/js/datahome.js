@@ -131,6 +131,9 @@ function loadSchedule(type){
   if(lunar) lunar.innerText = s.lunar_date;
   if(placeTitle) placeTitle.innerText = s.place.title;
   if(placeName) placeName.innerText = s.place.name;
+  if(placeDatetime) placeDatetime.innerText = s.place.datetime;
+  if(placeLunar) placeLunar.innerText = s.place.lunartime;
+  
   if(placeAddress) placeAddress.innerText = s.place.address;
   if(mapBtn){
     mapBtn.innerText = s.place.map_button;
