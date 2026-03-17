@@ -38,14 +38,6 @@ window.addEventListener("load",()=>{
   },2600);
 });
 
-// khóa scroll
-  /*document.documentElement.classList.add("no-scroll");
-  document.body.classList.add("no-scroll");*/
-  
-/*document.documentElement.classList.remove("no-scroll");
-    document.body.classList.remove("no-scroll");
-    window.scrollTo(0,0);*/
-    
 /* ===============================
    LOAD ẢNH TỰ ĐỘNG + RANDOM
 ================================ */
@@ -858,56 +850,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 });
-
-/* Mừng Cưới */
-const giftHTML = `
-<div class="gift-sheet" id="giftSheet">
-  <div class="gift-box">
-    <div class="gift-header">
-      <span>HỘP MỪNG CƯỚI</span>
-    </div>
-    <div class="gift-content">
-      <div class="bank-item">
-        <p class="bank-title">Chú Rể</p>
-        <img src="assets/images/qr/nhatrai.png">
-        <p>MB Bank</p>
-        <p>0356858136</p>
-        <strong>Nguyễn Đức Tiến</strong>
-      </div>
-      <div class="bank-item">
-        <p class="bank-title">Cô Dâu</p>
-        <img src="assets/images/qr/nhagai.png">
-        <p>XXXX</p>
-        <p>XXX</p>
-        <strong>Lê Thị Hường</strong>
-      </div>
-    </div>
-    <p class="gift-note">
-      Cảm ơn bạn đã đồng hành cùng chúng mình trong ngày trọng đại!
-    </p>
-  </div>
-</div>
-`;
-
-// thêm vào body
-document.body.insertAdjacentHTML("beforeend", giftHTML);
-// mở hộp
-document.getElementById("openGift").onclick = () => {
-  document.getElementById("giftSheet").classList.add("active");
-};
-// đóng hộp
-document.addEventListener("click", function(e){
-  if(e.target.id === "closeGift"){
-    document.getElementById("giftSheet").classList.remove("active");
-  }
-
-  if(e.target.id === "giftSheet"){
-    document.getElementById("giftSheet").classList.remove("active");
-  }
-
-});
-
-//loadRSVPStats();
 
 function renderCalendar(year, month, heartDays){
 
