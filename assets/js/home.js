@@ -730,8 +730,6 @@ closeBtn?.addEventListener("click", () => {
   rsvpModal.classList.remove("active");
 });
 
-const API_URL = "https://script.google.com/macros/s/AKfycbyTXN6-H0Cv55ERTCijKar9YwB08Tf179wNjtRCcN_TX2fzJ1umpSCzQ-QzkLz8cwXq/exec";
-
 // ===============================
 // RSVP SUBMIT - FULL CHỐNG SPAM
 // ===============================
