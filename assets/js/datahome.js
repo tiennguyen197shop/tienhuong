@@ -108,6 +108,9 @@ function loadSchedule(type){
   const lunar = document.querySelector(".lunar-date");
   const placeTitle = document.querySelector(".place-title");
   const placeName = document.querySelector(".location-name");
+  const placeDatetime = document.querySelector(".location-datetime");
+  const placeLunar = document.querySelector(".location-lunar");
+  
   const placeAddress = document.querySelector(".location-address");
   const mapBtn = document.querySelector(".map-btn");
   const buoile = document.querySelectorAll(".buoile");
