@@ -796,7 +796,7 @@ function startCountdown(){
 startCountdown();
 
 /* Video */
-const videoLink = "https://www.youtube.com/watch?v=uQzGdzzDtLA";
+const videoLink = "https://youtu.be/KcwuJFNWy2M";
 // hoặc
 // const videoLink = "videos/wedding.mp4";
 const videoBox = document.getElementById("videoItem");
