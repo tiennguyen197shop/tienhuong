@@ -2,7 +2,6 @@ export default function handler(req, res) {
   res.status(200);
 
   res.setHeader("Content-Type", "text/html; charset=utf-8");
-  res.setHeader("Cache-Control", "no-store, max-age=0");
 
   res.end(`
 <!DOCTYPE html>
@@ -23,12 +22,11 @@ export default function handler(req, res) {
 <meta name="twitter:description" content="Trân trọng kính mời bạn đến tham dự lễ cưới của chúng tôi">
 <meta name="twitter:image" content="https://tienhuongforever.vercel.app/assets/images/anhcuoi/a1.jpg">
 
+<!-- ✅ redirect chuẩn cho bot -->
+<meta http-equiv="refresh" content="0; url=/" />
+
 </head>
-<body>
-<script>
-window.location.replace("/");
-</script>
-</body>
+<body></body>
 </html>
 `);
 }
