@@ -1,18 +1,18 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
+      "source": "/",
       "has": [
-        { "type": "host", "value": "huongtien.vercel.app" }
+        { "type": "host", "value": "huongtienforever.vercel.app" }
       ],
-      "dest": "/nhagai.html"
+      "destination": "/nhagai.html"
     },
     {
-      "src": "/",
+      "source": "/",
       "has": [
-        { "type": "host", "value": "tienhuong.vercel.app" }
+        { "type": "host", "value": "tienhuongforever.vercel.app" }
       ],
-      "dest": "/nhatrai.html"
+      "destination": "/nhatrai.html"
     }
   ]
 }
