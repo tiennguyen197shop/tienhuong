@@ -19,9 +19,10 @@ fetch("assets/data/lichth.json")
   renderFamily();
   setupTabs();
   autoOpenTabFromURL();*/
+  
   renderHero();
-renderFamily();
-loadSchedule("bride_side");
+  renderFamily();
+  loadSchedule("bride_side");
 
   /*renderHero();
   renderFamily();
