@@ -15,14 +15,10 @@ fetch("assets/data/lichth.json")
 .then(data => {
 
   weddingData = data;
-  /*renderHero();
-  renderFamily();
-  setupTabs();
-  autoOpenTabFromURL();*/
-  
   renderHero();
   renderFamily();
-  loadSchedule("bride_side");
+  setupTabs();
+  autoOpenTabFromURL();
 
   /*renderHero();
   renderFamily();
