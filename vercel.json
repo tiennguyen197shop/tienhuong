@@ -1,1 +1,18 @@
-
+{
+  "routes": [
+    {
+      "src": "/",
+      "has": [
+        { "type": "host", "value": "huongtien.vercel.app" }
+      ],
+      "dest": "/nhagai.html"
+    },
+    {
+      "src": "/",
+      "has": [
+        { "type": "host", "value": "tienhuong.vercel.app" }
+      ],
+      "dest": "/nhatrai.html"
+    }
+  ]
+}
