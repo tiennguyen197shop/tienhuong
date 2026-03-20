@@ -146,19 +146,22 @@ function loadSchedule(type){
 ĐỔI TAB NHÀ TRAI / NHÀ GÁI
 ========================= */
 function autoOpenTabFromURL(){
-  const params = new URLSearchParams(window.location.search);
-  const nha = params.get("nha");
-  if(!nha) {
-    loadSchedule("groom_side");
-    return;
-  }
+  const host = window.location.hostname;
+
   const tabs = document.querySelectorAll(".schedule-tabs .tab");
-  if(nha === "gai"){
+
+  // Nhà gái
+  if (host.includes("huongtien")) {
     tabs.forEach(t => t.classList.remove("active"));
     const brideTab = document.querySelector('.tab[data-tab="bride"]');
-    if(brideTab) brideTab.classList.add("active");
+    if (brideTab) brideTab.classList.add("active");
     loadSchedule("bride_side");
-  } else {
+  } 
+  // Nhà trai (default)
+  else {
+    tabs.forEach(t => t.classList.remove("active"));
+    const groomTab = document.querySelector('.tab[data-tab="groom"]');
+    if (groomTab) groomTab.classList.add("active");
     loadSchedule("groom_side");
   }
 }
