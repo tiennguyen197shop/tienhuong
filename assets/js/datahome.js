@@ -145,7 +145,7 @@ function loadSchedule(type){
 /* =========================
 ĐỔI TAB NHÀ TRAI / NHÀ GÁI
 ========================= */
-function autoOpenTabFromURL(){
+/*function autoOpenTabFromURL(){
   const params = new URLSearchParams(window.location.search);
   const nha = params.get("nha");
   if(!nha) {
@@ -161,7 +161,42 @@ function autoOpenTabFromURL(){
   } else {
     loadSchedule("groom_side");
   }
+}*/
+
+function autoOpenTabFromURL() {
+  // Ưu tiên hash trước (Messenger giữ lại)
+  let nha = window.location.hash.replace("#", "");
+
+  // Nếu không có hash thì mới lấy query
+  if (!nha) {
+    const params = new URLSearchParams(window.location.search);
+    nha = params.get("nha");
+  }
+
+  const tabs = document.querySelectorAll(".schedule-tabs .tab");
+
+  // Reset active
+  tabs.forEach(t => t.classList.remove("active"));
+
+  if (nha === "gai") {
+    const brideTab = document.querySelector('.tab[data-tab="bride"]');
+    if (brideTab) brideTab.classList.add("active");
+    loadSchedule("bride_side");
+  } else if (nha === "trai") {
+    const groomTab = document.querySelector('.tab[data-tab="groom"]');
+    if (groomTab) groomTab.classList.add("active");
+    loadSchedule("groom_side");
+  } else {
+    // default
+    const groomTab = document.querySelector('.tab[data-tab="groom"]');
+    if (groomTab) groomTab.classList.add("active");
+    loadSchedule("groom_side");
+  }
 }
+
+// chạy khi load + khi đổi hash
+window.addEventListener("DOMContentLoaded", autoOpenTabFromURL);
+window.addEventListener("hashchange", autoOpenTabFromURL);
 
 /* =========================
 TAB NHÀ TRAI / NHÀ GÁI
