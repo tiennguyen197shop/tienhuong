@@ -145,7 +145,7 @@ function loadSchedule(type){
 /* =========================
 ĐỔI TAB NHÀ TRAI / NHÀ GÁI
 ========================= */
-/*function autoOpenTabFromURL(){
+function autoOpenTabFromURL(){
   const params = new URLSearchParams(window.location.search);
   const nha = params.get("nha");
   if(!nha) {
@@ -161,7 +161,7 @@ function loadSchedule(type){
   } else {
     loadSchedule("groom_side");
   }
-}*/
+}
 
 /* =========================
 TAB NHÀ TRAI / NHÀ GÁI
