@@ -641,6 +641,39 @@ box-shadow:0 10px 25px rgba(0,0,0,0.25);
   line-height:1.6;
 }
 
+/* ===============================
+   TAB
+=============================== */
+.schedule-tabs{
+display:flex;
+justify-content:center;
+gap:10px;
+margin:30px 0;
+}
+
+.tab{
+padding:10px 20px;
+border-radius:30px;
+border:1px solid #ddd;
+background:#fff;
+cursor:pointer;
+font-weight:600;
+}
+
+.tab.active{
+background:#ff6b81;
+color:#fff;
+border-color:#ff6b81;
+}
+
+.schedule-content{
+display:none;
+}
+
+.schedule-content.active{
+display:block;
+}
+
 /* Hiện */
 
 .wedding-info{
