@@ -10,6 +10,12 @@ let weddingData = null;
 LOAD JSON
 ========================= */
 
+function autoOpenTabFromURL(){
+  console.log("Hàm autoOpenTabFromURL đã chạy");
+  const host = window.location.hostname;
+  alert(host);
+}
+
 fetch("assets/data/lichth.json")
 .then(res => res.json())
 .then(data => {
