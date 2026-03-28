@@ -147,9 +147,9 @@ function loadSchedule(type){
 ========================= */
 function autoOpenTabFromURL(){
   const host = window.location.hostname;
-
   const tabs = document.querySelectorAll(".schedule-tabs .tab");
 
+alert(host);
   // Nhà gái
   if (host.includes("huongtienforever")) {
     tabs.forEach(t => t.classList.remove("active"));
