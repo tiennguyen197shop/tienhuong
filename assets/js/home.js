@@ -722,7 +722,7 @@ const giftHTML = `
     </div>
     <div class="gift-content">
       <div class="bank-item">
-        <p class="bank-title">Chú Rể</p>
+        <p class="bank-title">Chú Rể - Nguyễn Đức Tiến</p>
         <img src="assets/images/qrnhatrai.png">
         <p>TECKCOMBANK</p>
         <p>19028367647021</p>
