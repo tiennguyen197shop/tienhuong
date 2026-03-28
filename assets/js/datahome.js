@@ -15,9 +15,9 @@ fetch("assets/data/lichth.json")
 .then(data => {
 
   weddingData = data;
-  renderHero();
-  renderFamily();
-  setupTabs();
+  //renderHero();
+  //renderFamily();
+  //setupTabs();
   autoOpenTabFromURL();
 
   /*renderHero();
