@@ -725,7 +725,7 @@ const giftHTML = `
         <p class="bank-title">Chú Rể - Nguyễn Đức Tiến</p>
         <img src="assets/images/qrnhatrai.png">
         <p>TECKCOMBANK</p>
-        <p>19028367647021</p>
+        <p>19071262058013</p>
         <strong>Nguyễn Đức Tiến</strong>
       </div>
       <div class="bank-item">
