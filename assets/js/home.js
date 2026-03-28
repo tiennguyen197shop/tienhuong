@@ -723,15 +723,15 @@ const giftHTML = `
     <div class="gift-content">
       <div class="bank-item">
         <p class="bank-title">Chú Rể</p>
-        <img src="assets/images/qr/nhatrai.png">
-        <p>MB Bank</p>
-        <p>0356858136</p>
+        <img src="assets/images/qrnhatrai.png">
+        <p>TECKCOMBANK</p>
+        <p>XXX</p>
         <strong>Nguyễn Đức Tiến</strong>
       </div>
       <div class="bank-item">
         <p class="bank-title">Cô Dâu</p>
-        <img src="assets/images/qr/nhagai.png">
-        <p>XXXX</p>
+        <img src="assets/images/qrnhagai.png">
+        <p>TECKCOMBANK</p>
         <p>XXX</p>
         <strong>Lê Thị Hường</strong>
       </div>
