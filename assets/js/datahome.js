@@ -151,7 +151,7 @@ function autoOpenTabFromURL(){
   const tabs = document.querySelectorAll(".schedule-tabs .tab");
 
   // Nhà gái
-  if (host.includes("huongtien")) {
+  if (host.includes("huongtienforever")) {
     tabs.forEach(t => t.classList.remove("active"));
     const brideTab = document.querySelector('.tab[data-tab="bride"]');
     if (brideTab) brideTab.classList.add("active");
